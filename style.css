@@ -96,3 +96,10 @@ p{
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+  /* Center the name on smaller screens */
+@media (max-width: 600px) {
+    h2 {
+        text-align: center;
+    }
+}
