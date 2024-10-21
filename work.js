@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const dynamicText = document.querySelector('.dynamic-text');
 
     const texts = [
-        'a Software Engineer',
+        'a Software Engineer (almost!)',
         'a Web Developer',
         'an Artist',
         'a Gamer'
