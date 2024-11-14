@@ -6,45 +6,30 @@
 
 body {
     height: 100vh;
-    position: relative;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(50deg , #17305c  , #312a64 , #234277 , #383757);
+    background: linear-gradient(50deg, #72A2D1, #ACBCC2, #E6D3AB, #504D48);
     background-size: 300% 300%;
     animation: color 10s ease-in-out infinite;
     color: #fff;
 }
 
-@keyframes color{
-    0%{
-      background-position: 0 50%;
-    }
-    50%{
-      background-position: 100% 50%;
-    }
-    100%{
-      background-position: 0 50%;
-    }
-  }
+@keyframes color {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
 
 h2 {
-    font-family: 'Saira', sans-serif;
-    font-size: xx-large;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.8em;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: lowercase;
     color: white;
-    text-shadow: 0 0 1px transparent, 0 1px 2px rgb(0 0 0 / 50%);
-    text-align: center; 
-    white-space: nowrap;
+    text-align: center;
+    margin-bottom: -10px; /* Adjust space between h2 and links */
 }
-body > img {
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
+
 section {
     display: grid;
     place-items: center;
@@ -52,104 +37,110 @@ section {
     inset: 0;
     overflow-y: scroll;
 }
+
 section div {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 10px;
-    justify-content: center;
+    padding: 20px;
     align-items: center;
-    text-align: center; 
+    text-align: center;
 }
-section > div {
-    padding: 100px 10px;
-}
+
 section div img {
-    width: 100px;
+    width: 110px;
     aspect-ratio: 1;
     border-radius: 50%;
-    box-shadow: 0 0 8px 1px lightblue;
+    box-shadow: 0 0 10px 2px rgba(173, 216, 230, 0.7);
 }
+
 a {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: center;
-    border: 1.5px solid white;
-    padding: 10px;
+    width: 100%;
+    padding: 12px 0;
     color: white;
     text-decoration: none;
-    gap: 20px;
-    align-items: center;
-    border-radius: 4px;
-    transition-duration: 200ms;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    gap: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s, color 0.2s;
 }
+
 a:hover {
     background: white;
     color: #0f172a;
-    font-weight: bolder;
 }
+
 a i {
     font-size: 1.3em;
 }
-p {
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-/* width */
+/* Remove scrollbar */
 ::-webkit-scrollbar {
     width: 0; 
     background: transparent;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #060015a6;
-}
-  
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #0b003590;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-.dynamic-text-container {
-    text-align: center;
-    font-size: 0.7em; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -1.5rem;
-}
-
-.dynamic-text-container p {
-    display: inline-block;
-    margin: 0;
-    font-family: "Patrick Hand", cursive;
-    font-weight:500;
-    font-size: 2em; 
-}
-
-.dynamic-text {
-    font-weight: normal;
-}
-
-/* Center the name on smaller screens */
+/* Mobile-specific styling */
 @media (max-width: 620px) {
     h2 {
+        font-size: 1.5em;
         text-align: center;
         white-space: normal;
     }
+
+    section {
+        margin-top: -20px;
+    }
+
     section div {
-        align-items: center;
-        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    section div img {
+        width: 90px;
+    }
+
+    a {
+        font-size: 0.9em;
+        padding: 10px 0;
+    }
+
+    a i {
+        font-size: 1.1em;
     }
 }
 
+/* Additional styles for very small screens */
+@media (max-width: 375px) {
+    h2 {
+        font-size: 1.3em;
+    }
+
+    section div {
+        padding: 10px;
+    }
+
+    section div img {
+        width: 80px;
+    }
+
+    a {
+        font-size: 0.8em;
+    }
+
+    a i {
+        font-size: 1em;
+    }
+}
