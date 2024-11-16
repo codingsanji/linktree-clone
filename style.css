@@ -27,7 +27,7 @@ h2 {
     text-transform: lowercase;
     color: white;
     text-align: center;
-    margin-bottom: -10px; /* Adjust space between h2 and links */
+    margin-bottom: -10px;
 }
 
 section {
@@ -84,13 +84,11 @@ a i {
     font-size: 1.3em;
 }
 
-/* Remove scrollbar */
 ::-webkit-scrollbar {
     width: 0; 
     background: transparent;
 }
 
-/* Mobile-specific styling */
 @media (max-width: 620px) {
     h2 {
         font-size: 1.5em;
@@ -113,16 +111,15 @@ a i {
     }
 
     a {
-        font-size: 0.9em;
-        padding: 10px 0;
+        font-size: 1em;
+        padding: 14px 0;
     }
 
     a i {
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 }
 
-/* Additional styles for very small screens */
 @media (max-width: 375px) {
     h2 {
         font-size: 1.3em;
@@ -137,10 +134,11 @@ a i {
     }
 
     a {
-        font-size: 0.8em;
+        font-size: 0.9em;
+        padding: 12px 0;
     }
 
     a i {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
